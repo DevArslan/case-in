@@ -1,0 +1,23 @@
+<div class="wrapper" [formGroup]="authForm">
+  <h1>Авторизация</h1>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Имя пользователя</mat-label>
+    <input
+      formControlName="login"
+      matInput
+      type="text"
+      autocomplete="off"
+      required
+    />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Пароль</mat-label>
+    <input formControlName="password" matInput type="password" required />
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="auth(authForm.value)">
+    Войти
+  </button>
+</div>

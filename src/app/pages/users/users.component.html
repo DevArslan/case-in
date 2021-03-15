@@ -1,0 +1,24 @@
+<mat-card class="card" *ngFor="let item of getArray(25)">
+  <mat-card-header>
+    <div mat-card-avatar class="header-image"></div>
+    <mat-card-title>Сиба Ину</mat-card-title>
+    <mat-card-subtitle>Директор собак</mat-card-subtitle>
+  </mat-card-header>
+  <img
+    mat-card-image
+    src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+    alt="Photo of a Shiba Inu"
+  />
+  <mat-card-content>
+    <p>Группа: Собаки</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button
+      mat-mini-fab
+      color="primary"
+      aria-label="Example icon button with a menu icon"
+    >
+      <mat-icon>message</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>
