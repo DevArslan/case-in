@@ -1,0 +1,201 @@
+{
+    "asset": {
+        "copyright": "(C)2021 Арслан",
+        "generator": "maya2glTF v1.2.1 03f669e0d38e",
+        "version": "2.0"
+    },
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "scene": 0,
+    "nodes": [
+        {
+            "name": "JAR",
+            "children": [
+                1
+            ],
+            "translation": [
+                0.0,
+                -39.9265251159668,
+                0.0
+            ]
+        },
+        {
+            "name": "JAR:PIV",
+            "mesh": 0,
+            "translation": [
+                0.0,
+                -1.0569915771484376,
+                0.0
+            ]
+        }
+    ],
+    "meshes": [
+        {
+            "name": "JARShape",
+            "extras": {
+                "targetNames": []
+            },
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": 1,
+                        "POSITION": 2,
+                        "TANGENT": 3,
+                        "TEXCOORD_0": 4
+                    },
+                    "indices": 0,
+                    "mode": 4,
+                    "material": 0
+                }
+            ]
+        }
+    ],
+    "materials": [
+        {
+            "name": "lambert1",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    1.0
+                ],
+                "metallicFactor": 0.0,
+                "roughnessFactor": 1.0
+            }
+        }
+    ],
+    "accessors": [
+        {
+            "name": "JARShape#0/indices",
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5123,
+            "count": 1842,
+            "max": [
+                798
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "JARShape#0/vertices/NORMAL",
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 799,
+            "max": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "min": [
+                -1.0,
+                -1.0,
+                -1.0
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "JARShape#0/vertices/POSITION",
+            "bufferView": 1,
+            "byteOffset": 9588,
+            "componentType": 5126,
+            "count": 799,
+            "max": [
+                7.239931106567383,
+                25.36033058166504,
+                7.239931106567383
+            ],
+            "min": [
+                -7.239931106567383,
+                1.0569915771484376,
+                -7.239931106567383
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "JARShape#0/vertices/TANGENT",
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 799,
+            "max": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "min": [
+                -1.0,
+                -1.0,
+                -1.0,
+                -1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "JARShape#0/vertices/TEXCOORD_0",
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 799,
+            "max": [
+                1.0,
+                1.0
+            ],
+            "min": [
+                0.0,
+                0.0
+            ],
+            "type": "VEC2"
+        }
+    ],
+    "bufferViews": [
+        {
+            "name": "project3/data/indices-2",
+            "buffer": 0,
+            "byteOffset": 38352,
+            "byteLength": 3684,
+            "target": 34963
+        },
+        {
+            "name": "project3/data/vertices-12",
+            "buffer": 0,
+            "byteOffset": 12784,
+            "byteLength": 19176,
+            "byteStride": 12,
+            "target": 34962
+        },
+        {
+            "name": "project3/data/vertices-16",
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 12784,
+            "byteStride": 16,
+            "target": 34962
+        },
+        {
+            "name": "project3/data/vertices-8",
+            "buffer": 0,
+            "byteOffset": 31960,
+            "byteLength": 6392,
+            "byteStride": 8,
+            "target": 34962
+        }
+    ],
+    "buffers": [
+        {
+            "name": "project3/data",
+            "byteLength": 42036,
+            "uri": "project30.bin"
+        }
+    ]
+}

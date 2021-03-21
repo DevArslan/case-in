@@ -14,6 +14,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { IMqttServiceOptions, MqttModule } from 'ngx-mqtt';
+import { environment as env } from '../environments/environment.prod';
+
+const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
+  hostname: env.mqtt.server,
+  port: env.mqtt.port,
+  protocol: env.mqtt.protocol === 'wss' ? 'wss' : 'ws',
+  path: '',
+};
 
 @NgModule({
   declarations: [AppComponent],
@@ -29,6 +38,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     RouterModule,
     HttpClientModule,
+    MqttModule.forRoot(MQTT_SERVICE_OPTIONS),
   ],
   providers: [],
   bootstrap: [AppComponent],
