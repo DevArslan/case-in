@@ -1,0 +1,62 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button class="icon" (click)="drawer.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Росатом</span>
+  <span class="spacer"></span>
+  <button
+    mat-icon-button
+    class="icon"
+    aria-label="Example icon-button with share icon"
+  >
+    <mat-icon>face</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-drawer-container class="container" [hasBackdrop]="false">
+  <mat-drawer #drawer [mode]="'over'">
+    <mat-accordion>
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title> Сотрудники </mat-panel-title>
+          <mat-panel-description> </mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-list>
+          <mat-list-item class="nav-item" matRipple>Моя команда </mat-list-item>
+          <mat-list-item class="nav-item" matRipple [routerLink]="['users']">
+            Все сотрудники
+          </mat-list-item>
+        </mat-list>
+      </mat-expansion-panel>
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title> Полезные ссылки </mat-panel-title>
+          <mat-panel-description> </mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-list>
+          <mat-list-item class="nav-item" matRipple>Бухгалтерия </mat-list-item>
+          <mat-list-item class="nav-item" matRipple>
+            Где туалет?
+          </mat-list-item>
+        </mat-list>
+      </mat-expansion-panel>
+    </mat-accordion>
+    <mat-list>
+      <mat-list-item class="nav-item" matRipple [routerLink]="['quiz']"
+        >Квиз
+      </mat-list-item>
+      <mat-list-item class="nav-item" matRipple [routerLink]="['trainer']"
+        >Тренажер
+      </mat-list-item>
+    </mat-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>

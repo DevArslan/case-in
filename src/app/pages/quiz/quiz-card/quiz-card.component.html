@@ -1,0 +1,10 @@
+<h1 class="label"><ng-content></ng-content></h1>
+<div class="answers">
+  <button
+    mat-raised-button
+    *ngFor="let answer of answers"
+    (click)="answerSelected.emit(answer)"
+  >
+    {{ answer }}
+  </button>
+</div>

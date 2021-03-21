@@ -1,0 +1,16 @@
+<div class="carousel">
+  <div class="cards" #cards>
+    <quiz-card
+      [answers]="question?.answers"
+      *ngFor="let question of questions; let i = index"
+      (answerSelected)="slideQuiz(i); selectAnswer($event, i)"
+      >{{ question?.question }}</quiz-card
+    >
+  </div>
+</div>
+
+<mat-progress-bar
+  [color]="'warn'"
+  mode="determinate"
+  value="{{ (currentCardNumber / questions.length) * 100 }}"
+></mat-progress-bar>

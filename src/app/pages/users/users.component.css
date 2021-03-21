@@ -4,6 +4,7 @@
   justify-content: space-between;
 }
 .card {
+  width: 30%;
   max-width: 250px;
   margin: 20px 0;
 }

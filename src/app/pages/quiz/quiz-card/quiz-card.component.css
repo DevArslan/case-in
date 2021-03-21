@@ -1,0 +1,36 @@
+:host {
+  width: 550px;
+  padding: 15px;
+  border-radius: 4px;
+}
+.label {
+  text-align: center;
+  color: white;
+  background-color: #4204db;
+  border-radius: 50px;
+  width: fit-content;
+  padding: 10px 15px;
+  margin: 0 auto 35px auto;
+}
+.answers {
+  width: 550px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 20px;
+}
+.answers button {
+  border-radius: 50px;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+@media screen and (max-width: 900px) {
+  :host {
+    width: 350px;
+  }
+  .answers {
+    width: 350px;
+  }
+}
