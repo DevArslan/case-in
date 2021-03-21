@@ -293,7 +293,7 @@ export class TrainerComponent implements OnInit, AfterViewInit {
         15 &&
       this.wagonsOverhang[this.wagonsOverhang.length - 1]?.position.z -
         this.modelsOverhang[0]?.position.z <=
-        15.05
+        15.06
     ) {
       console.log('wagon created');
       // this.openLatch();
