@@ -41,6 +41,7 @@ export class TrainerComponent implements OnInit, AfterViewInit {
   currentWagonNumber = 0;
   cubesQueue = 0;
   latchIsOpen: boolean = false;
+  wagonsIsMove: boolean = false;
 
   constructor(
     private _mqttService: MqttService,
@@ -279,7 +280,10 @@ export class TrainerComponent implements OnInit, AfterViewInit {
     this.renderer.render(this.scene, this.camera);
     this.controls.update();
 
-    if (!this.latchIsOpen) {
+    // if (!this.latchIsOpen) {
+    //   this.moveCarriage();
+    // }
+    if (this.wagonsIsMove) {
       this.moveCarriage();
     }
 
@@ -291,6 +295,7 @@ export class TrainerComponent implements OnInit, AfterViewInit {
         this.modelsOverhang[0]?.position.z <=
         15.05
     ) {
+      console.log('wagon created');
       // this.openLatch();
       this.createWagon();
     }
